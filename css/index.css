@@ -1,0 +1,39 @@
+main > section {
+  margin: 10px;
+  padding: 20px 10px;
+  vertical-align: top;
+  display: inline-block;
+  border: solid 2px black;
+  height: calc(70vh - 20px - 4px);
+  /* height of main - margin - border */
+}
+
+section > img {
+  max-height: 250px;
+}
+
+#post-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.post-detail {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.post-para {
+  font-size: 20px;
+}
+
+.float_right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.float_left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
