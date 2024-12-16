@@ -16,7 +16,6 @@
             <img src="./assets/logo/ECO_logo_small.jpg" />
           </picture>
         </a>
-        <!-- <span></span> -->
         <ul>
           <li><a href="#" id="current-page">1st</a></li>
           <li><a href="./pages/second.html">2nd</a></li>
@@ -26,44 +25,28 @@
       </nav>
     </header>
 
-    <main>
-      <section>
-        <!-- <div class="img-ish-float float_left"></div> -->
-        <img class="float_left" src="./assets/image/8214ec515f225aa60927193e13218d81.jpg" />
-        <h2 id="post-title">Content</h2>
-        <p class="post-detail">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur ab non debitis
-          aliquam atque saepe, minima, in sit eligendi sed itaque, fugiat molestiae nisi perferendis
-          ex corrupti quasi quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Aliquid ratione repellendus error fugit voluptatum vel dolores. Enim consequatur commodi
-          tenetur mollitia
-        </p>
-        <p class="post-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur ab non debitis
-          aliquam atque saepe, minima, in sit eligendi sed itaque, fugiat molestiae nisi perferendis
-          ex corrupti quasi quaerat.
-        </p>
-        <p class="post-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur ab non debitis
-          aliquam atque saepe, minima, in sit eligendi sed itaque, fugiat molestiae nisi perferendis
-          ex corrupti quasi quaerat.
-        </p>
-        <p class="post-para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur ab non debitis
-          aliquam atque saepe, minima, in sit eligendi sed itaque, fugiat molestiae nisi perferendis
-          ex corrupti quasi quaerat.
-        </p>
-      </section>
-    </main>
+    <form id="contact-form" action="submit-path" method="post">
+      <h2>Connect With Our Team</h2>
+      <h3>Fill the form so that our team can reach out to you</h3>
 
-    <footer>
-      <nav aria-label="navigation to other pages">
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </nav>
-    </footer>
+      <div id="name-field">
+        <label for="name-input"></label>
+        <input type="text" id="name-input" name="name" placeholder="Name" required />
+      </div>
+
+      <div id="email-field">
+        <label for="email-input"></label>
+        <input type="email" id="email-input" name="email" placeholder="Email" required />
+      </div>
+
+      <div id="phone-field">
+        <label for="phone-input"></label>
+        <input type="tel" id="phone-input" name="phone" placeholder="Phone Number" required />
+      </div>
+
+      <div id="submit-field">
+        <button type="submit" id="submit-button">Submit</button>
+      </div>
+    </form>
   </body>
 </html>
