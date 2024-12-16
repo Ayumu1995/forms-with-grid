@@ -2,6 +2,13 @@
   font-family: Helvetica, sans-serif;
 } */
 
+form {
+  height: calc(100vh - 110px);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #contact-form {
   display: grid;
   grid-template-areas:
@@ -17,7 +24,7 @@
   row-gap: 0px;
   column-gap: 40px;
   padding: 18vh 15vw 13vh 15vw;
-  background-image: url("../assets/image/Contact\ Form\ 5.png");
+  background-image: url("../assets/image/index.png");
   text-align: center;
 }
 

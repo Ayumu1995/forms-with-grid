@@ -43,11 +43,3 @@ nav ul li a:active {
 #current-page {
   color: aquamarine;
 }
-
-form {
-  height: calc(100vh - 110px);
-  /* max-height: 1000px; */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}

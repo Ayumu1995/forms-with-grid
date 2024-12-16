@@ -1,0 +1,123 @@
+#form-wrapper {
+  height: calc(100vh - 110px);
+  background-color: #aed3cf;
+  padding: 12% 13%;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+  padding: 7% 9%;
+  background-color: #f2ede6;
+  color: #00054b;
+  font-family: Montserrat;
+  border-radius: 30px;
+}
+
+#contact-form {
+  display: grid;
+  grid-template-areas:
+    "img heading heading"
+    "img name contact"
+    "img email base"
+    "img message base"
+    "img submit sns";
+
+  grid-template-columns: auto 2.5fr 1fr;
+  grid-template-rows: repeat(4, 1fr) 1.2fr;
+}
+
+#img-field {
+  grid-area: img;
+}
+
+#img-field img {
+  object-fit: contain;
+  max-height: 540.25px;
+  margin-right: 80px;
+}
+
+#header-field {
+  grid-area: heading;
+}
+
+#header-field h1 {
+  grid-area: heading;
+  font-size: 70px;
+  font-family: Playfair Display;
+  font-weight: 300;
+}
+
+#name-field {
+  grid-area: name;
+  display: flex;
+  align-items: end;
+}
+
+#email-field {
+  grid-area: email;
+  display: flex;
+  align-items: end;
+}
+
+#message-field {
+  grid-area: message;
+  display: flex;
+  align-items: end;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #00054b;
+  padding-bottom: 25px;
+  width: 65%;
+  font-size: 22px;
+  font-family: Montserrat;
+}
+
+::placeholder {
+  color: rgba(0, 2, 75, 0.5);
+}
+
+#submit-field {
+  grid-area: submit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#submit-field button {
+  background-color: #00054b;
+  width: 60%;
+  height: 50px;
+  border-radius: 48px;
+  color: white;
+  font-size: 16px;
+  font-family: Montserrat;
+}
+
+#contact-field {
+  grid-area: contact;
+  padding-top: 50px;
+}
+
+#base-field {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  grid-area: base;
+  align-items: start;
+  justify-content: center;
+}
+
+#sns-field {
+  grid-area: sns;
+  display: flex;
+}
+
+#sns-field img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
