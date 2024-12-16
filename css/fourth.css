@@ -1,59 +1,142 @@
-#flex_column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 5%;
+@font-face {
+  font-family: "dutch801";
+  src: url("../assets/fonts/dutch-801-bold-bt.ttf") format("truetype");
 }
 
-#flex_wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: calc((100% - 90%) / 3);
+@font-face {
+  font-family: "century";
+  src: url("../assets/fonts/century_normal.ttf") format("truetype");
 }
 
-main {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+@font-face {
+  font-family: "calibri";
+  src: url("../assets/fonts/calibri-regular.ttf") format("truetype");
 }
 
-aside {
-  padding: 40px;
-  background-color: rgb(224, 255, 228);
-  border: solid 2px rgb(52, 136, 63);
-  flex-basis: 15%;
+#form-wrapper {
+  height: calc(100vh - 110px);
+  background-color: #dcdcdc;
+  padding: 7% 13%;
 }
 
-article {
-  padding: 70px;
-  flex-basis: 84%;
-  background-color: rgb(224, 255, 228);
-  border: solid 2px rgb(52, 136, 63);
-}
-
-aside > div {
-  background-color: rgb(199, 238, 255);
-  border: solid 2px rgb(69, 125, 170);
-  width: 100%;
-  height: 10%;
-  max-height: 50px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-article > div {
-  background-color: rgb(199, 238, 255);
-  border: solid 2px rgb(69, 125, 170);
-  width: 22.5%;
-  max-height: 300px;
-}
-
-aside a {
-  font-size: large;
-}
-
-img {
+form {
   width: 100%;
   height: 100%;
+  background-color: white;
+  padding: 4% 3%;
+  border-radius: 12px;
+  border: solid 2px #eddede;
+}
+
+#contact-form {
+  display: grid;
+  grid-template-areas:
+    "heading heading"
+    "f-name l-name"
+    "email role"
+    "address address"
+    "city pincode"
+    "date file"
+    "none submit";
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr repeat(2, 1fr) 2fr repeat(3, 1fr);
+  row-gap: 25px;
+  column-gap: 100px;
+}
+
+#header-field {
+  grid-area: heading;
+}
+
+#header-field h1 {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "dutch801";
+}
+
+#f-name-field {
+  grid-area: f-name;
+}
+
+#l-name-field {
+  grid-area: l-name;
+}
+
+#date-field {
+  grid-area: date;
+}
+
+#email-field {
+  grid-area: email;
+}
+
+#role-field {
+  grid-area: role;
+}
+
+#address-field {
+  grid-area: address;
+}
+
+#city-field {
+  grid-area: city;
+}
+
+#pincode-field {
+  grid-area: pincode;
+}
+
+#file-field {
+  grid-area: file;
+}
+
+#submit-field {
+  grid-area: submit;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-family: century;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  display: block;
+  border: solid 2px #d2d2d2;
+  border-radius: 3px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 35px;
+  padding: 0 20px;
+  font-size: 19px;
+  font-family: "calibri";
+}
+
+textarea {
+  padding: 20px;
+  height: calc(100% - 30px);
+}
+
+#file-field input {
+  padding: 0;
+}
+
+::placeholder {
+  color: #787676;
+}
+
+#submit-field button {
+  background-color: #1b52df;
+  color: white;
+  font-size: 26px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 60px;
 }
