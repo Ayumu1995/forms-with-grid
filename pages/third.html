@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/third.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Basic Nav Example</title>
   </head>
@@ -16,7 +22,6 @@
             <img src="../assets/logo/ECO_logo_small.jpg" />
           </picture>
         </a>
-        <!-- <span></span> -->
         <ul>
           <li><a href="../index.html">1st</a></li>
           <li><a href="./second.html">2nd</a></li>
@@ -26,20 +31,48 @@
       </nav>
     </header>
 
-    <main>
-      <div class="top"></div>
-      <div class="top"></div>
-      <div class="bottom"></div>
-    </main>
+    <div id="form-wrapper">
+      <form id="contact-form" action="submit-path" method="post">
+        <div id="header-field">
+          <h1>Book your appointment now</h1>
+          <h2>So our team can reach out to you on time</h2>
+        </div>
 
-    <footer>
-      <nav aria-label="navigation to other pages">
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </nav>
-    </footer>
+        <div id="name-field">
+          <label for="name-input">Full Name</label>
+          <input type="text" id="name-input" name="name" placeholder="eg: John Doe" required />
+        </div>
+
+        <div id="email-field">
+          <label for="email-input">Email</label>
+          <input
+            type="email"
+            id="email-input"
+            name="email"
+            placeholder="eg: john@email.com "
+            required
+          />
+        </div>
+
+        <div id="phone-field">
+          <label for="phone-input">Phone Number</label>
+          <input type="tel" id="phone-input" name="phone" placeholder="Phone Number" required />
+        </div>
+
+        <div id="date-field">
+          <label for="date-input">Available Date</label>
+          <input type="date" id="date-input" name="date" placeholder="Select" required />
+        </div>
+
+        <div id="message-field">
+          <label for="message-input">Share Your Message</label>
+          <textarea id="message-input" name="message" placeholder="Message" required></textarea>
+        </div>
+
+        <div id="submit-field">
+          <button type="submit" id="submit-button">Book Now →</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

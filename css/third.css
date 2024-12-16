@@ -1,31 +1,108 @@
-main > div {
-  background-color: cadetblue;
-  border: solid 2px rgb(0, 0, 0);
+#form-wrapper {
+  height: calc(100vh - 110px);
+  background-color: #dcdcdc;
+  padding: 9% 13%;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 20px;
-}
-
-.top {
-  width: 49%;
-  height: 45%;
-}
-
-.bottom {
+form {
   width: 100%;
-  height: 48%;
+  height: 100%;
+  background-color: white;
+  padding: 6%;
+  padding-bottom: 4%;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  font-family: Poppins;
 }
 
-#flex_column {
+#contact-form {
+  display: grid;
+  grid-template-areas:
+    "heading heading"
+    "name date"
+    "email message"
+    "phone message"
+    "none submit";
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 25px;
+}
+
+#header-field {
+  grid-area: heading;
+}
+
+#header-field h1 {
+  font-size: 43px;
+  font-weight: 600;
+}
+
+#header-field h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+#name-field {
+  grid-area: name;
+}
+
+#date-field {
+  grid-area: date;
+}
+
+#email-field {
+  grid-area: email;
+}
+
+#message-field {
+  grid-area: message;
+}
+
+#phone-field {
+  grid-area: phone;
+}
+
+#submit-field {
+  grid-area: submit;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: right;
+  align-items: center;
 }
 
-aside {
+label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background-color: #f6f9ff;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  font-size: 24px;
+}
+
+textarea {
   padding: 20px;
+  height: calc(100% - 46px);
+}
+
+::placeholder {
+  color: #c8c8c8;
+}
+
+#submit-field button {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
 }
