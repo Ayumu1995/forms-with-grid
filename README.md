@@ -1,7 +1,7 @@
 # Grid Layouts
 
 This project demonstrates various layouts using CSS Grid.
-Each page is designed to be viewed at a resolution of 1600×1200.
+Each page is designed to be viewed at a resolution of **1600×1200**.
 
 ## File Structure
 
